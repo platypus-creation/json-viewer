@@ -1,76 +1,69 @@
-[json-formatter] {
+[json-viewer] {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-size: 10px;
-  line-height: 12px;
-  padding: 10px;
-  background: #f5f5f5;
-  border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  overflow: auto;
 }
-[json-formatter] .group {
+[json-viewer] .group {
   display: inline;
 }
-[json-formatter] .group .bracket {
+[json-viewer] .group .bracket {
   display: inline;
 }
-[json-formatter] .group ul {
+[json-viewer] .group ul {
   border-left: 1px dotted rgba(0, 0, 0, 0.1);
   margin: 0;
   padding: 0;
 }
-[json-formatter] .group ul li {
+[json-viewer] .group ul li {
   padding: 0;
   margin: 0 0 0 2em;
 }
-[json-formatter] .group.folded {
+[json-viewer] .group.folded {
   cursor: pointer;
 }
-[json-formatter] .group.folded ul li {
+[json-viewer] .group.folded ul li {
   font-size: 0;
   line-height: 0;
 }
-[json-formatter] .group.folded .bracket.start {
+[json-viewer] .group.folded .bracket.start {
   float: left;
 }
-[json-formatter] .group.folded .bracket.start:after {
+[json-viewer] .group.folded .bracket.start:after {
   content: '...';
   background: rgba(255, 255, 155, 0.5);
 }
-[json-formatter] .group.hovered > ul {
+[json-viewer] .group.hovered > ul {
   background: rgba(255, 255, 155, 0.5);
 }
-[json-formatter] ul {
+[json-viewer] ul {
   margin: 0;
 }
-[json-formatter] ul li {
+[json-viewer] ul li {
   list-style: none;
 }
-[json-formatter] ul li[class^='$'] {
+[json-viewer] ul li[class^='$'] {
   display: none;
 }
-[json-formatter] .string {
+[json-viewer] .string {
   color: #090;
 }
-[json-formatter] .number {
+[json-viewer] .number {
   color: blue;
 }
-[json-formatter] .boolean {
+[json-viewer] .boolean {
   color: red;
 }
-[json-formatter] .html {
+[json-viewer] .html {
   color: purple;
 }
-[json-formatter] .undefined,
-[json-formatter] .null {
+[json-viewer] .undefined,
+[json-viewer] .null {
   color: #ccc;
 }
-[json-formatter] .key {
+[json-viewer] .key {
   opacity: 0.8;
   float: left;
   margin-right: 0.5em;
   cursor: pointer;
 }
-[json-formatter] .value {
+[json-viewer] .value {
   margin-left: 0.5em;
 }
