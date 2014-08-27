@@ -1,0 +1,76 @@
+[json-formatter] {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 10px;
+  line-height: 12px;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  overflow: auto;
+}
+[json-formatter] .group {
+  display: inline;
+}
+[json-formatter] .group .bracket {
+  display: inline;
+}
+[json-formatter] .group ul {
+  border-left: 1px dotted rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+}
+[json-formatter] .group ul li {
+  padding: 0;
+  margin: 0 0 0 2em;
+}
+[json-formatter] .group.folded {
+  cursor: pointer;
+}
+[json-formatter] .group.folded ul li {
+  font-size: 0;
+  line-height: 0;
+}
+[json-formatter] .group.folded .bracket.start {
+  float: left;
+}
+[json-formatter] .group.folded .bracket.start:after {
+  content: '...';
+  background: rgba(255, 255, 155, 0.5);
+}
+[json-formatter] .group.hovered > ul {
+  background: rgba(255, 255, 155, 0.5);
+}
+[json-formatter] ul {
+  margin: 0;
+}
+[json-formatter] ul li {
+  list-style: none;
+}
+[json-formatter] ul li[class^='$'] {
+  display: none;
+}
+[json-formatter] .string {
+  color: #090;
+}
+[json-formatter] .number {
+  color: blue;
+}
+[json-formatter] .boolean {
+  color: red;
+}
+[json-formatter] .html {
+  color: purple;
+}
+[json-formatter] .undefined,
+[json-formatter] .null {
+  color: #ccc;
+}
+[json-formatter] .key {
+  opacity: 0.8;
+  float: left;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+[json-formatter] .value {
+  margin-left: 0.5em;
+}

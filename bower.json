@@ -1,0 +1,23 @@
+{
+  "name": "json-viewer",
+  "main": "json-viewer.js",
+  "version": "1.0.0",
+  "authors": [
+    "Guillaume Esquevin <guillaume.esquevin@platypus-creation.com>"
+  ],
+  "description": "High performance JSON highlighter & browser",
+  "keywords": [
+    "angularjs",
+    "json",
+    "collapse",
+    "highlight"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

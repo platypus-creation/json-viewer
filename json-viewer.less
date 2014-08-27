@@ -1,0 +1,90 @@
+[json-formatter] {
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.15);
+    overflow: auto;
+    .group {
+        display: inline;
+        .bracket {
+            display: inline;
+            &.start {
+                
+            }
+            &.end {
+            }
+        }
+        ul {
+            border-left: 1px dotted rgba(0,0,0,0.1);
+            // overflow: hidden;
+            margin: 0;
+            padding: 0;
+            li {
+                padding: 0;
+                margin: 0 0 0 2em;
+            }
+        }
+        &.folded {
+            cursor: pointer;
+            ul {
+                li {
+                    font-size: 0;
+                    line-height: 0;
+                }
+            }
+            .bracket.start {
+                float: left;
+                &:after {
+                    content: '...';
+                    background: rgba(255,255,155,0.5);
+                }
+            }
+        }
+        &.hovered {
+            >ul {
+                background: rgba(255,255,155,0.5);
+            }
+        }
+    }
+    ul {
+        margin: 0;
+        &.object {
+        }
+        &.array {
+        }
+        li {
+            list-style: none;
+            &[class^='$'] {
+                display: none;
+            }
+        }
+    }
+    .string {
+        color: #090;
+    }
+    .number {
+        color: blue;
+    }
+    .boolean {
+        color: red;
+    }
+    .html {
+        color: purple;
+    }
+    .undefined,
+    .null {
+        color: #ccc;
+    }
+    .key {
+        opacity: 0.8;
+        float: left;
+        margin-right: 0.5em;
+        cursor: pointer;
+    }
+    .value {
+        margin-left: 0.5em;
+    }
+}
