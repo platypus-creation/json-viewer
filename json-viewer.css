@@ -1,36 +1,36 @@
 [json-viewer] {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
-[json-viewer] .group {
+[json-viewer] .json-viewer--group {
   display: inline;
 }
-[json-viewer] .group .bracket {
+[json-viewer] .json-viewer--group .json-viewer--bracket {
   display: inline;
 }
-[json-viewer] .group ul {
+[json-viewer] .json-viewer--group ul {
   border-left: 1px dotted rgba(0, 0, 0, 0.1);
   margin: 0;
   padding: 0;
 }
-[json-viewer] .group ul li {
+[json-viewer] .json-viewer--group ul li {
   padding: 0;
   margin: 0 0 0 2em;
 }
-[json-viewer] .group.folded {
+[json-viewer] .json-viewer--group.json-viewer--folded {
   cursor: pointer;
 }
-[json-viewer] .group.folded ul li {
+[json-viewer] .json-viewer--group.json-viewer--folded ul li {
   font-size: 0;
   line-height: 0;
 }
-[json-viewer] .group.folded .bracket.start {
+[json-viewer] .json-viewer--group.json-viewer--folded .json-viewer--bracket.json-viewer--start {
   float: left;
 }
-[json-viewer] .group.folded .bracket.start:after {
+[json-viewer] .json-viewer--group.json-viewer--folded .json-viewer--bracket.json-viewer--start:after {
   content: '...';
   background: rgba(255, 255, 155, 0.5);
 }
-[json-viewer] .group.hovered > ul {
+[json-viewer] .json-viewer--group.json-viewer--hovered > ul {
   background: rgba(255, 255, 155, 0.5);
 }
 [json-viewer] ul {
@@ -42,28 +42,28 @@
 [json-viewer] ul li[class^='$'] {
   display: none;
 }
-[json-viewer] .string {
+[json-viewer] .json-viewer--string {
   color: #090;
 }
-[json-viewer] .number {
+[json-viewer] .json-viewer--number {
   color: blue;
 }
-[json-viewer] .boolean {
+[json-viewer] .json-viewer--boolean {
   color: red;
 }
-[json-viewer] .html {
+[json-viewer] .json-viewer--html {
   color: purple;
 }
-[json-viewer] .undefined,
-[json-viewer] .null {
+[json-viewer] .json-viewer--undefined,
+[json-viewer] .json-viewer--null {
   color: #ccc;
 }
-[json-viewer] .key {
+[json-viewer] .json-viewer--key {
   opacity: 0.8;
   float: left;
   margin-right: 0.5em;
   cursor: pointer;
 }
-[json-viewer] .value {
+[json-viewer] .json-viewer--value {
   margin-left: 0.5em;
 }

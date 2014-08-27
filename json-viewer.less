@@ -1,13 +1,13 @@
 [json-viewer] {
     font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
-    .group {
+    .json-viewer--group {
         display: inline;
-        .bracket {
+        .json-viewer--bracket {
             display: inline;
-            &.start {
+            &.json-viewer--start {
                 
             }
-            &.end {
+            &.json-viewer--end {
             }
         }
         ul {
@@ -19,7 +19,7 @@
                 margin: 0 0 0 2em;
             }
         }
-        &.folded {
+        &.json-viewer--folded {
             cursor: pointer;
             ul {
                 li {
@@ -27,7 +27,7 @@
                     line-height: 0;
                 }
             }
-            .bracket.start {
+            .json-viewer--bracket.json-viewer--start {
                 float: left;
                 &:after {
                     content: '...';
@@ -35,7 +35,7 @@
                 }
             }
         }
-        &.hovered {
+        &.json-viewer--hovered {
             >ul {
                 background: rgba(255,255,155,0.5);
             }
@@ -43,9 +43,9 @@
     }
     ul {
         margin: 0;
-        &.object {
+        &.json-viewer--object {
         }
-        &.array {
+        &.json-viewer--array {
         }
         li {
             list-style: none;
@@ -54,29 +54,29 @@
             }
         }
     }
-    .string {
+    .json-viewer--string {
         color: #090;
     }
-    .number {
+    .json-viewer--number {
         color: blue;
     }
-    .boolean {
+    .json-viewer--boolean {
         color: red;
     }
-    .html {
+    .json-viewer--html {
         color: purple;
     }
-    .undefined,
-    .null {
+    .json-viewer--undefined,
+    .json-viewer--null {
         color: #ccc;
     }
-    .key {
+    .json-viewer--key {
         opacity: 0.8;
         float: left;
         margin-right: 0.5em;
         cursor: pointer;
     }
-    .value {
+    .json-viewer--value {
         margin-left: 0.5em;
     }
 }

@@ -31,21 +31,21 @@
                             return '<' + type.toUpperCase() + '>' + value +'</'+type.toUpperCase() +'>';
                         }, ' ');
                 
-                        jsonString = jsonString.replace(/{/g, '<div class="group"><div class="bracket start">{</div><ul class="object"><li>');
-                        jsonString = jsonString.replace(/}/g, '</li></ul><div class="bracket end">}</div></div>');
+                        jsonString = jsonString.replace(/{/g, '<div class="json-viewer--group"><div class="json-viewer--bracket json-viewer--start">{</div><ul class="json-viewer--object"><li>');
+                        jsonString = jsonString.replace(/}/g, '</li></ul><div class="json-viewer--bracket json-viewer--end">}</div></div>');
 
-                        jsonString = jsonString.replace(/\[/g, '<div class="group"><div class="bracket start">[</div><ul class="object"><li>');
-                        jsonString = jsonString.replace(/\]/g, '</li></ul><div class="bracket end">]</div></div>');
+                        jsonString = jsonString.replace(/\[/g, '<div class="json-viewer--group"><div class="json-viewer--bracket json-viewer--start">[</div><ul class="json-viewer--object"><li>');
+                        jsonString = jsonString.replace(/\]/g, '</li></ul><div class="json-viewer--bracket json-viewer--end">]</div></div>');
 
-                        jsonString = jsonString.replace(/,$/gm, '<span class="comma">,</span></li><li>');
+                        jsonString = jsonString.replace(/,$/gm, '<span class="json-viewer--comma">,</span></li><li>');
                 
-                        jsonString = jsonString.replace(/("[^"]+"):/g, '<span class="key">$1:</span>');
+                        jsonString = jsonString.replace(/("[^"]+"):/g, '<span class="json-viewer--key">$1:</span>');
 
-                        jsonString = jsonString.replace(/"<NULL>null<\/NULL>"/g, '<span class="value null">null</span>');
-                        jsonString = jsonString.replace(/"<UNDEFINED>undefined<\/UNDEFINED>"/g, '<span class="value undefined">undefined</span>');
-                        jsonString = jsonString.replace(/"<STRING>([^<]+)<\/STRING>"/g, '<span class="value string">"$1"</span>');
-                        jsonString = jsonString.replace(/"<NUMBER>([^<]+)<\/NUMBER>"/g, '<span class="value number">$1</span>');
-                        jsonString = jsonString.replace(/"<BOOLEAN>([^<]+)<\/BOOLEAN>"/g, '<span class="value boolean">$1</span>');
+                        jsonString = jsonString.replace(/"<NULL>null<\/NULL>"/g, '<span class="json-viewer--value json-viewer--null">null</span>');
+                        jsonString = jsonString.replace(/"<UNDEFINED>undefined<\/UNDEFINED>"/g, '<span class="json-viewer--value json-viewer--undefined">undefined</span>');
+                        jsonString = jsonString.replace(/"<STRING>([^<]+)<\/STRING>"/g, '<span class="json-viewer--value json-viewer--string">"$1"</span>');
+                        jsonString = jsonString.replace(/"<NUMBER>([^<]+)<\/NUMBER>"/g, '<span class="json-viewer--value json-viewer--number">$1</span>');
+                        jsonString = jsonString.replace(/"<BOOLEAN>([^<]+)<\/BOOLEAN>"/g, '<span class="json-viewer--value json-viewer--boolean">$1</span>');
                 
                         $(element).html(jsonString);
                     }
