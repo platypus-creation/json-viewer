@@ -51,24 +51,24 @@
                     }
                 });
 
-                element.on('click', '.group', function(e){
+                element.on('click', '.json-viewer--group', function(e){
                     e.stopPropagation();
-                    $(this).removeClass('folded');
+                    $(this).removeClass('json-viewer--folded');
                 });
-                element.on('click', '.bracket', function(e){
+                element.on('click', '.json-viewer--bracket', function(e){
                     e.stopPropagation();
-                    $(this).closest('.group').toggleClass('folded');
+                    $(this).closest('.json-viewer--group').toggleClass('json-viewer--folded');
                 });
-                element.on('click', '.key', function(e){
+                element.on('click', '.json-viewer--key', function(e){
                     e.stopPropagation();
-                    $(this).next('.group').toggleClass('folded');
+                    $(this).next('.json-viewer--group').toggleClass('json-viewer--folded');
                 });
-                element.on('mouseenter', '.key', function(e){
-                    element.find('.hovered').removeClass('hovered');
-                    $(this).next('.group').addClass('hovered');
+                element.on('mouseenter', '.json-viewer--key', function(e){
+                    element.find('.json-viewer--hovered').removeClass('json-viewer--hovered');
+                    $(this).next('.json-viewer--group').addClass('json-viewer--hovered');
                 });
                 element.on('mouseleave', function(e){
-                    element.find('.hovered').removeClass('hovered');
+                    element.find('.json-viewer--hovered').removeClass('json-viewer--hovered');
                 });
             }
         };
