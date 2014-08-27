@@ -51,19 +51,19 @@
                     }
                 });
 
-                element.on('click', '.group', function(e){
+                element.on('click', '.json-viewer--group', function(e){
                     e.stopPropagation();
                     $(this).removeClass('folded');
                 });
-                element.on('click', '.bracket', function(e){
+                element.on('click', '.json-viewer--bracket', function(e){
                     e.stopPropagation();
                     $(this).closest('.group').toggleClass('folded');
                 });
-                element.on('click', '.key', function(e){
+                element.on('click', '.json-viewer--key', function(e){
                     e.stopPropagation();
                     $(this).next('.group').toggleClass('folded');
                 });
-                element.on('mouseenter', '.key', function(e){
+                element.on('mouseenter', '.json-viewer--key', function(e){
                     element.find('.hovered').removeClass('hovered');
                     $(this).next('.group').addClass('hovered');
                 });
