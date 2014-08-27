@@ -18,9 +18,9 @@ For efficiency it uses native `JSON.stringify` function to turn your json into a
 2.  Add platypus.jsonviewer as a module dependency to your app : `angular.module('YOUR_APP', ['platypus.jsonviewer'])`
 3.  Use the directive with you json content
 
-
-    <div json-viewer="MY_JSON"></div>
-
+ 
+`<div json-viewer="MY_JSON"></div>`
+    
     
 ## Demo
 
