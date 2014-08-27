@@ -1,0 +1,20 @@
+{
+  "name": "json-viewer",
+  "version": "0.0.0",
+  "homepage": "https://github.com/platypus-creation/json-viewer",
+  "authors": [
+    "Guillaume Esquevin <guillaume.esquevin@platypus-creation.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-json-viewer": "*"
+  }
+}

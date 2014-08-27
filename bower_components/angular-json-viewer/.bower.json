@@ -1,0 +1,33 @@
+{
+  "name": "json-viewer",
+  "main": "json-viewer.js",
+  "authors": [
+    "Guillaume Esquevin <guillaume.esquevin@platypus-creation.com>"
+  ],
+  "description": "High performance JSON highlighter & browser",
+  "keywords": [
+    "angularjs",
+    "json",
+    "collapse",
+    "highlight"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/platypus-creation/json-viewer",
+  "_release": "9bff47ff65",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9bff47ff6562b1bc0ec04b962a5159c944240768"
+  },
+  "_source": "git://github.com/platypus-creation/json-viewer.git",
+  "_target": "*",
+  "_originalSource": "angular-json-viewer",
+  "_direct": true
+}

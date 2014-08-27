@@ -253,3 +253,14 @@ footer {
     color:#444;
   }
 }
+
+.demo {
+    max-height: 300px;
+    overflow: auto;
+    font-size: 10px;
+    line-height: 12px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.25);
+    padding: 1em;
+    border-radius: 2px;
+}
