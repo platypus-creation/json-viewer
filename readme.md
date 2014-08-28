@@ -15,4 +15,3 @@ High performance JSON highlighter & browser
 `<div json-viewer="MY_JSON"></div>`
     
 
-

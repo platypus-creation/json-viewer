@@ -12,7 +12,7 @@
                 var htmlElementClass = typeof HTMLElement !== "undefined" ? HTMLElement : Element;
 
                 scope.$watch('data', function(nv, ov){
-                    element.html('');
+                    element[0].innerHTML = '';
                     if (nv !== null && nv !== undefined) {
                         var json = nv;
                         var jsonString = JSON.stringify(json, function(key, value){
@@ -30,7 +30,7 @@
 
                             return '<' + type.toUpperCase() + '>' + value +'</'+type.toUpperCase() +'>';
                         }, ' ');
-                
+                        
                         jsonString = jsonString.replace(/{/g, '<div class="json-viewer--group"><div class="json-viewer--bracket json-viewer--start">{</div><ul class="json-viewer--object"><li>');
                         jsonString = jsonString.replace(/}/g, '</li></ul><div class="json-viewer--bracket json-viewer--end">}</div></div>');
 
@@ -46,8 +46,8 @@
                         jsonString = jsonString.replace(/"<STRING>([^<]+)<\/STRING>"/g, '<span class="json-viewer--value json-viewer--string">"$1"</span>');
                         jsonString = jsonString.replace(/"<NUMBER>([^<]+)<\/NUMBER>"/g, '<span class="json-viewer--value json-viewer--number">$1</span>');
                         jsonString = jsonString.replace(/"<BOOLEAN>([^<]+)<\/BOOLEAN>"/g, '<span class="json-viewer--value json-viewer--boolean">$1</span>');
-                
-                        $(element).html(jsonString);
+
+                        element[0].innerHTML = jsonString;
                     }
                 });
 
