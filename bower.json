@@ -1,7 +1,7 @@
 {
   "name": "json-viewer",
   "main": "json-viewer.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     "Guillaume Esquevin <guillaume.esquevin@platypus-creation.com>"
   ],
