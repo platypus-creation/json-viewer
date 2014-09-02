@@ -12,6 +12,10 @@
     "collapse",
     "highlight"
   ],
+  "main": [
+      "./json-viewer.css",
+      "./json-viewer.js"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
