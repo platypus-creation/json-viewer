@@ -1,7 +1,7 @@
 {
   "name": "json-viewer",
   "main": "json-viewer.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "authors": [
     "Guillaume Esquevin <guillaume.esquevin@platypus-creation.com>"
   ],
@@ -11,6 +11,10 @@
     "json",
     "collapse",
     "highlight"
+  ],
+  "main": [
+      "./json-viewer.css",
+      "./json-viewer.js"
   ],
   "license": "MIT",
   "ignore": [
