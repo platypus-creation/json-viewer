@@ -30,9 +30,6 @@
   content: '...';
   background: rgba(255, 255, 155, 0.5);
 }
-[json-viewer] .json-viewer--group.json-viewer--hovered > ul {
-  background: rgba(255, 255, 155, 0.5);
-}
 [json-viewer] ul {
   margin: 0;
 }
@@ -63,6 +60,9 @@
   float: left;
   margin-right: 0.5em;
   cursor: pointer;
+}
+[json-viewer] .json-viewer--key:hover + .json-viewer--group > .json-viewer--object {
+  background: rgba(255, 255, 155, 0.5);
 }
 [json-viewer] .json-viewer--value {
   margin-left: 0.5em;

@@ -8,9 +8,6 @@
                 "data": '=jsonViewer'
             },
             link: function(scope, element, attrs){
-                // IE8 doesn't have an HTMLElement class
-                var htmlElementClass = typeof HTMLElement !== "undefined" ? HTMLElement : Element;
-
                 scope.$watch('data', function(nv, ov){
                     element[0].innerHTML = '';
                     if (nv !== null && nv !== undefined) {
@@ -24,7 +21,7 @@
                                 return "<UNDEFINED>undefined</UNDEFINED>";
                             }
 
-                            if($.isArray(value) || type === 'object'){
+                            if(angular.isArray(value) || type === 'object'){
                                 return value;
                             }
 
@@ -51,24 +48,21 @@
                     }
                 });
 
-                element.on('click', '.json-viewer--group', function(e){
+                element.on('click', function(e){
                     e.stopPropagation();
-                    $(this).removeClass('json-viewer--folded');
-                });
-                element.on('click', '.json-viewer--bracket', function(e){
-                    e.stopPropagation();
-                    $(this).closest('.json-viewer--group').toggleClass('json-viewer--folded');
-                });
-                element.on('click', '.json-viewer--key', function(e){
-                    e.stopPropagation();
-                    $(this).next('.json-viewer--group').toggleClass('json-viewer--folded');
-                });
-                element.on('mouseenter', '.json-viewer--key', function(e){
-                    element.find('.json-viewer--hovered').removeClass('json-viewer--hovered');
-                    $(this).next('.json-viewer--group').addClass('json-viewer--hovered');
-                });
-                element.on('mouseleave', function(e){
-                    element.find('.json-viewer--hovered').removeClass('json-viewer--hovered');
+                    var target = angular.element(e.target);
+                    if(target.hasClass('json-viewer--group')) {
+                        target.removeClass('json-viewer--folded');
+                        return;
+                    }
+                    if(target.hasClass('json-viewer--bracket')) {
+                        target.parent().toggleClass('json-viewer--folded');
+                        return;
+                    }
+                    if(target.hasClass('json-viewer--key')) {
+                        target.next().toggleClass('json-viewer--folded');
+                        return;
+                    }
                 });
             }
         };
