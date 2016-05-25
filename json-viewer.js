@@ -25,6 +25,20 @@
                                 return value;
                             }
 
+                            if (angular.isString(value)) {
+                                value = value.replace(/[<>"'&]/g,
+                                    function(char) {
+                                        switch (char) {
+                                            case '<': return '&lt;';
+                                            case '>': return '&gt;';
+                                            case '"': return '&quot;';
+                                            case "'": return '&apos;';
+                                            case '&': return '&amp;';
+                                        }
+                                        return char;
+                                    });
+                            }
+
                             return '<' + type.toUpperCase() + '>' + value +'</'+type.toUpperCase() +'>';
                         }, ' ');
                         
